@@ -12,6 +12,7 @@ const displayBooks = (id, title, author) => {
       <p>${title}</p>
       <p>${author}</p>
       <br>
+      <div class="hr"></div>
     `;
   li.insertBefore(removeButton, li.lastElementChild);
   li.appendChild(br);
