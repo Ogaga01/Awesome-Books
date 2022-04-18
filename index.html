@@ -10,19 +10,20 @@
 <body>
     <main id="books">
         <h2 class="fav-books">Awesome books</h2>
-        <div id="books-list">
+        <ul id="books-list"> <!--
             <p class="book-name"></p>
             <p class="book author"></p>
             <button type="button" class="remove">Remove</button>
-        </div>
+            -->
+        </ul>
 
     </main>
     <form class="">
         <input id="bookTitle" type="text"  placeholder="Title">
         <input id="bookAuthor" type="text" placeholder="Author">
-        <input type="submit" name="add" value="add">
+        <span class="error-msg"></span>
+        <input type="submit" name="add" value="add" id="add-book">
     </form>
-    
 
     <script src="./script.js"></script>
 </body>
