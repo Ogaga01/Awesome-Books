@@ -1,4 +1,6 @@
-
+li {
+    list-style-type: none;
+}
 form {
     display: flex;
     flex-direction: column;
