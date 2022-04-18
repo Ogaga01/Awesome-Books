@@ -7,7 +7,7 @@ const displayBooks = (id, title, author) => {
   const br = document.createElement('br');
   const removeButton = document.createElement('button');
   removeButton.textContent = 'Remove';
-  
+
   li.innerHTML = `
       <p>${title}</p>
       <p>${author}</p>
@@ -17,9 +17,9 @@ const displayBooks = (id, title, author) => {
   li.insertBefore(removeButton, li.lastElementChild);
   li.appendChild(br);
   bookList.appendChild(li);
-  
+
   removeButton.addEventListener('click', () => {
-  book = books.filter((book) => {
+    book = books.filter((book) => {
       if (book.id !== id) {
         return true;
       }
