@@ -49,12 +49,12 @@ const addBooks = (title, author) => {
     displayBooks(object.id, object.title, object.author);
   }
 };
-
+/*
 const getBookFromStorage = JSON.parse(localStorage.getItem('books'));
 if (getBookFromStorage) {
   book = getBookFromStorage;
 }
-
+*/
 books.forEach((book) => {
   displayBooks(book.id, book.title, book.author);
 });
