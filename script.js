@@ -39,7 +39,7 @@ const ErrorMsg = (error) => {
 
 const addBooks = (title, author) => {
   const id = Date.now();
-  const object = { id, title, author };//changes
+  const object = { id, title, author };
   if (title === '' || author === '') {
     ErrorMsg('Kindly fill the fields');
   } else {

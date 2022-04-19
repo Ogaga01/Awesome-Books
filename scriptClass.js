@@ -52,14 +52,16 @@ class Book {
   }
 }
 
+/*  DOM ELEMENTS  */
 const displayBooks = (id, title, author) => {
   bookList.classList.add('list-border');
   const li = document.createElement('li');
   const removeButton = document.createElement('button');
   removeButton.textContent = 'Remove';
 
-  li.innerHTML = `<div class= "book-container">
-      <p>${title}</p>
+  li.innerHTML = `<div class= "book-info">
+      <p>"${title}"</p>
+      <span>by</span>
       <p>${author}</p>
       </div>
     `;
