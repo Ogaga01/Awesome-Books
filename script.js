@@ -1,4 +1,4 @@
-const books = [];
+let books = [];
 const addButton = document.querySelector('#add-book');
 const bookList = document.querySelector('#books-list');
 
@@ -7,18 +7,19 @@ const displayBooks = (id, title, author) => {
   const br = document.createElement('br');
   const removeButton = document.createElement('button');
   removeButton.textContent = 'Remove';
-  
+
   li.innerHTML = `
       <p>${title}</p>
       <p>${author}</p>
       <br>
+      <div class="hr"></div>
     `;
   li.insertBefore(removeButton, li.lastElementChild);
   li.appendChild(br);
   bookList.appendChild(li);
-  
+
   removeButton.addEventListener('click', () => {
-  book = books.filter((book) => {
+    books = books.filter((book) => {
       if (book.id !== id) {
         return true;
       }
@@ -49,12 +50,12 @@ const addBooks = (title, author) => {
     displayBooks(object.id, object.title, object.author);
   }
 };
-/*
+
 const getBookFromStorage = JSON.parse(localStorage.getItem('books'));
 if (getBookFromStorage) {
-  book = getBookFromStorage;
+  books = getBookFromStorage;
 }
-*/
+
 books.forEach((book) => {
   displayBooks(book.id, book.title, book.author);
 });
