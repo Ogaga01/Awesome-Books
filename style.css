@@ -15,3 +15,11 @@ form {
   background-color: black;
   width: 20%;
 }
+
+.list-border {
+  border: 2px solid black;
+}
+
+.book-container {
+  display: flex;
+}
