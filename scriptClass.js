@@ -2,6 +2,32 @@ let books = [];
 const addButton = document.querySelector('#add-book');
 const bookList = document.querySelector('#books-list');
 
+/*  Declaring the class first */
+class Book {
+    constructor(id, title, author) {
+      this.id = id;
+      this.title = title;
+      this.author = author;
+    }
+  
+    addBooks() {
+  
+        const object = { id, title, author };
+        books = JSON.parse(localStorage.getItem('books'));
+        if (title === '' || author === '') {
+          ErrorMsg('Kindly fill the fields');
+        } else {
+          books = [];
+          books.push(object);
+          localStorage.setItem('books', JSON.stringify(books));
+          document.getElementById('bookTitle').value = '';
+          document.getElementById('bookAuthor').value = '';
+          displayBooks(object.id, object.title, object.author);
+        }
+      };
+    }
+}
+
 const displayBooks = (id, title, author) => {
   const li = document.createElement('li');
   const br = document.createElement('br');
