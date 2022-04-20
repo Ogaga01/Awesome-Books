@@ -28,9 +28,9 @@ a {
 
 .header-menu {
   display: flex;
+  margin-right: 50px;
   gap: 50px;
-  margin-right: 40px;
-  background-color: green;
+  background-color: black;
 }
 
 .header-items {
@@ -123,13 +123,13 @@ form {
   align-items: flex-end;
 }
 
-form input,
 #add-book {
   border: 3px solid black;
   box-shadow: 3px 3px;
 }
 
 form input {
+  border: 3px solid black;
   width: 180px;
 }
 
