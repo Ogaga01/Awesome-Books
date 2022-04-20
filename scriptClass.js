@@ -108,39 +108,38 @@ if (books !== null) {
   });
 }
 
+/*  NAVIGATION-BAR  */
 const date = document.getElementById('date');
-// eslint-disable-next-line no-undef
-const { DateTime } = luxon;
-const now = DateTime.now();
-date.innerText = now.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
+const dateNow = new Date();
+date.innerText = dateNow;
 
-const seeListsOfBooks = document.getElementById('list-of-books');
-const addNewBook = document.getElementById('add-new-link');
-const contactLink = document.getElementById('contact-link');
+const listBooks = document.getElementById('listBooks');
+const addBook = document.getElementById('addBook');
+const contactUs = document.getElementById('contactInfo');
 
-seeListsOfBooks.addEventListener('click', () => {
-  seeListsOfBooks.classList.add('active');
-  addNewBook.classList.remove('active');
-  contactLink.classList.remove('active');
-  document.getElementById('book-con').classList.remove('hide');
-  document.getElementById('forms').classList.add('hide');
-  document.getElementById('contact').classList.add('hide');
+listBooks.addEventListener('click', () => {
+  listBooks.classList.add('active');
+  addBook.classList.remove('active');
+  contactUs.classList.remove('active');
+  document.getElementById('bookList-container').classList.remove('hide');
+  document.getElementById('addBook-container').classList.add('hide');
+  document.getElementById('contactUs-container').classList.add('hide');
 });
 
-addNewBook.addEventListener('click', () => {
-  seeListsOfBooks.classList.remove('active');
-  addNewBook.classList.add('active');
-  contactLink.classList.remove('active');
-  document.getElementById('book-con').classList.remove('hide');
-  document.getElementById('forms').classList.add('hide');
-  document.getElementById('contact').classList.add('hide');
+addBook.addEventListener('click', () => {
+  listBooks.classList.remove('active');
+  addBook.classList.add('active');
+  contactUs.classList.remove('active');
+  document.getElementById('addBook-container').classList.remove('hide');
+  document.getElementById('bookList-container').classList.add('hide');
+  document.getElementById('contactUs-container').classList.add('hide');
 });
 
-contactLink.addEventListener('click', () => {
-  seeListsOfBooks.classList.remove('active');
-  addNewBook.classList.remove('active');
-  contactLink.classList.add('active');
-  document.getElementById('contact').classList.remove('hide');
-  document.getElementById('book-con').classList.add('hide');
-  document.getElementById('forms').classList.add('hide');
+contactUs.addEventListener('click', () => {
+  listBooks.classList.remove('active');
+  addBook.classList.remove('active');
+  contactUs.classList.add('active');
+  document.getElementById('contactUs-container').classList.remove('hide');
+  document.getElementById('bookList-container').classList.add('hide');
+  document.getElementById('addBook-container').classList.add('hide');
 });
